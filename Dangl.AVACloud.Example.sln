@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangl.AVACloud.Example", "src\Dangl.AVACloud.Example\Dangl.AVACloud.Example.csproj", "{FB85A862-D674-4182-B068-9AB2DAC8B1FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB3F53F1-A4BE-467F-BA5F-3F80FA3E77C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB85A862-D674-4182-B068-9AB2DAC8B1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB85A862-D674-4182-B068-9AB2DAC8B1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB85A862-D674-4182-B068-9AB2DAC8B1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB85A862-D674-4182-B068-9AB2DAC8B1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB85A862-D674-4182-B068-9AB2DAC8B1FA} = {BB3F53F1-A4BE-467F-BA5F-3F80FA3E77C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04ED3FAE-DCD9-42A5-B5C7-A9B29FA49F9A}
+	EndGlobalSection
+EndGlobal
