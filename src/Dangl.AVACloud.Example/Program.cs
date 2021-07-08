@@ -19,6 +19,13 @@ namespace Dangl.AVACloud.Example
 
         private static async Task Main(string[] args)
         {
+            if (string.IsNullOrWhiteSpace(clientId) || string.IsNullOrWhiteSpace(clientSecret))
+            {
+                Console.WriteLine($"Please set the {nameof(clientId)} and {nameof(clientSecret)} variables in the source code in Program.cs to be able to run the demo.");
+                Console.WriteLine("Conversion finished. Press any key to exit...");
+                Console.ReadKey();
+            }
+
             var clientFactory = GetAvaCloudClientFactory();
 
             await ConvertGaebToProjectAndPrintPositionsAsync(clientFactory.GaebConversionClient);
