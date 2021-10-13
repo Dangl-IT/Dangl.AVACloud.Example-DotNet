@@ -38,7 +38,7 @@ namespace Dangl.AVACloud.Example
         private static AvaCloudClientFactory GetAvaCloudClientFactory()
         {
             // We need to supply our own values for clientId and clientSecret here.
-            // You can optional set other properties on the avaCloudConfig after it
+            // You can optionally set other properties on the avaCloudConfig after it
             // was created, e.g. if you want to connect to an on premises installation
             // of AVACloud or want to set a different HttpHandler
             var avaCloudConfig = new AvaCloudConfiguration(clientId, clientSecret);
