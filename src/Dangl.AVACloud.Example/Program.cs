@@ -51,7 +51,10 @@ namespace Dangl.AVACloud.Example
             using var gaebFileStream = System.IO.File.OpenRead("GAEBXML_EN.X86");
             var fileParameter = new FileParameter(gaebFileStream);
             // We're sending the GAEB file to AVACloud and get a ProjectDto back
-            var avaProject = await gaebConversionClient.ConvertToAvaAsync(fileParameter, removePlainTextLongTexts: false, removeHtmlLongTexts: false);
+            var avaProject = await gaebConversionClient.ConvertToAvaAsync(fileParameter,
+                supportSkippedItemNumberLevelsInPositions: false,
+                removePlainTextLongTexts: false,
+                removeHtmlLongTexts: false);
 
             // Here, we just recursively get a flat list of all positions in the project.
             // GAEB files (or ServiceSpecifications) have a hierarchical structure.
@@ -69,7 +72,11 @@ namespace Dangl.AVACloud.Example
             using var gaebFileStream = System.IO.File.OpenRead("GAEBXML_EN.X86");
             var fileParameter = new FileParameter(gaebFileStream);
             // You can use "de" for the conversionCulture to produce German Excel files
-            var excelResult = await gaebConversionClient.ConvertToExcelAsync(fileParameter, writePrices: true, writeLongTexts: true, conversionCulture: "en");
+            var excelResult = await gaebConversionClient.ConvertToExcelAsync(fileParameter,
+                supportSkippedItemNumberLevelsInPositions: false,
+                writePrices: true,
+                writeLongTexts: true,
+                conversionCulture: "en");
             using var excelDiskStream = System.IO.File.Create("ExcelConversion.xlsx");
             await excelResult.Stream.CopyToAsync(excelDiskStream);
             var fullSavePath = System.IO.Path.GetFullPath("ExcelConversion.xlsx");
