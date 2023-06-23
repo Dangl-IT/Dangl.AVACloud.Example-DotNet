@@ -1,4 +1,4 @@
-﻿using Dangl.AVACloud.Client;
+using Dangl.AVACloud.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +24,7 @@ namespace Dangl.AVACloud.Example
                 Console.WriteLine($"Please set the {nameof(clientId)} and {nameof(clientSecret)} variables in the source code in Program.cs to be able to run the demo.");
                 Console.WriteLine("Conversion finished. Press any key to exit...");
                 Console.ReadKey();
+                return;
             }
 
             var clientFactory = GetAvaCloudClientFactory();
