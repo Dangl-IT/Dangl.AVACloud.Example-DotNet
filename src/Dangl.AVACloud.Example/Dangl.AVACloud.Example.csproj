@@ -9,7 +9,7 @@
     <!-- This is the public package on the NuGet feed. If you have access to the evaluation package,
     you can directly reference 'Dangl.AVACloud.Client' and get access to the actual model implementations
     with more features such as auto-calculation-->
-    <PackageReference Include="Dangl.AVACloud.Client.Public" Version="1.29.2" />
+    <PackageReference Include="Dangl.AVACloud.Client.Public" Version="1.52.2" />
   </ItemGroup>
 
   <ItemGroup>

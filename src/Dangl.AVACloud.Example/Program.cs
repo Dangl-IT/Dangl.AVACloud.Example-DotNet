@@ -55,7 +55,11 @@ namespace Dangl.AVACloud.Example
             var avaProject = await gaebConversionClient.ConvertToAvaAsync(fileParameter,
                 supportSkippedItemNumberLevelsInPositions: false,
                 removePlainTextLongTexts: false,
-                removeHtmlLongTexts: false);
+                removeHtmlLongTexts: false,
+                outputHtmlAsXml: false,
+                keepEmptyHtmlText: false,
+                allowUpperCaseItemNumbers: false,
+                allowLumpSumItemsWithDifferingQuantities: false);
 
             // Here, we just recursively get a flat list of all positions in the project.
             // GAEB files (or ServiceSpecifications) have a hierarchical structure.
@@ -77,7 +81,12 @@ namespace Dangl.AVACloud.Example
                 supportSkippedItemNumberLevelsInPositions: false,
                 writePrices: true,
                 writeLongTexts: true,
-                conversionCulture: "en");
+                conversionCulture: "en",
+                includeArticleNumbers: false,
+                keepEmptyHtmlText: false,
+                allowUpperCaseItemNumbers: false,
+                outputHtmlAsXml: false,
+                allowLumpSumItemsWithDifferingQuantities: false);
             using var excelDiskStream = System.IO.File.Create("ExcelConversion.xlsx");
             await excelResult.Stream.CopyToAsync(excelDiskStream);
             var fullSavePath = System.IO.Path.GetFullPath("ExcelConversion.xlsx");
